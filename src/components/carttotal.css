@@ -1,0 +1,126 @@
+/* Container for the entire cart total section */
+.w-full {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Style for the section title */
+.text-2xl {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Style for the heading */
+h3 {
+  margin-bottom: 10px;
+  font-size: 1.875rem; 
+  margin-left : 2rem;/* Tailwind's 'text-2xl' */
+}
+
+/* Flex container for the content with spacing between elements */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-2 {
+  gap: 8px; /* Adds gap between elements in flex container */
+}
+
+.mt-2 {
+  margin-top: 8px;
+}
+
+.text-sm {
+  font-size: 0.875rem; /* Smaller font size */
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Style for the individual lines (Subtotal, Shipping Fee, Total) */
+hr {
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+/* The values for the amount fields (currency and amounts) */
+h4, h6 {
+  font-weight: normal;
+}
+
+/* Customize the total (important part of the section) */
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333; /* Darker color for emphasis */
+  margin-left: 10px; /* Adds space between the "Total" label and the amount */
+}
+
+/* Flex container for the subtotal, shipping, and total line items */
+.flex.justify-between {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+h4 {
+  flex-grow: 1; /* Makes the label (like 'Total') grow and take available space */
+  text-align: right;
+  font-size : 15px;
+  font-weight : bold;
+}
+
+h6 {
+  text-align: right;
+  font-weight : bolder;
+  flex-grow : 1 /* Ensures the number is aligned to the right */
+}
+
+
+/*abourt css */
+/* ImageContentSection.css */
+.image-content-section {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 20px;
+  gap: 20px; /* Space between the image and content */
+}
+
+.image-container {
+  flex: 1;
+}
+
+.image-container img {
+  width: 100%; /* Make sure the image is responsive */
+  height: auto;
+  max-width: 500px; /* Set a max-width to limit how large the image can grow */
+  border-radius: 8px; /* Optional: for rounded corners */
+}
+.content-container {
+  flex: 2; 
+  max-width: 600px; 
+
+}
+
+.content-container h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content-container p {
+  margin: 0 0 10px;
+  margin-right: 3.5rem;
+  line-height: 1.6;
+  margin-bottom: 5rem;
+}
+

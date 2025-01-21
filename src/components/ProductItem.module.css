@@ -1,0 +1,49 @@
+/* ProductItem.module.css */
+
+.productItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.productImage img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+.productImage:hover img {
+  transform: scale(1.05); /* Slightly scales up the image on hover */
+}
+
+.productImage:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow on hover */
+}
+
+.productName {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.productPrice {
+  font-size: 1.2rem;
+  color: #333; /* Adjust as needed */
+}
+
+.productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  margin: 0 auto; 
+  max-width: 1000px; 
+}
+
+.productItemWrapper {
+  flex: 1 1 calc(20% - 2rem); /* Five items per row with margin accounted for */
+  box-sizing: border-box; /* Prevents padding from affecting width */
+  margin: 1rem; /* Adjust spacing between items */
+}

@@ -1,0 +1,141 @@
+.prata-regular {
+    font-family: 'Prata', serif; 
+  }
+ .place_order h2{
+    margin-left: 0.5rem;
+  }
+  .place_order h2::before{
+    content: ''; 
+    position: absolute; 
+    left: 29%; 
+    top: 9.3rem; 
+    transform: translateY(-50%); 
+    width: 70px; 
+    height: 2px;
+    background-color: rgb(75, 71, 71); 
+}
+  .place-order-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .left-side {
+    flex: 1;
+    margin-right: 20px;
+    margin-left: 5rem;
+  }
+  
+  .right-side {
+    flex: 1;
+  }
+  
+  .place_order {
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  
+  .place_order .flex {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+.email_form input{
+    width: 80%;
+    display: grid;
+}
+  .place_order input {
+    width: 40%; 
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .place_order div {
+    margin-bottom: 20px;
+  }
+  
+  .right-side {
+    padding: 20px; 
+  }
+  
+  .right-side h2.prata-regular {
+    font-family: 'Prata', serif;
+    font-size: 24px; 
+    margin-bottom: 20px; 
+  }
+  
+  .payment-container {
+    display: flex; 
+    gap: 20px; 
+    align-items: center; 
+    margin-left: 1rem;
+  }
+  
+  .payment_types {
+    display: flex;
+    align-items: center; 
+    border: 1px solid #ccc; 
+    padding: 8px; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+  }
+  
+  .payment_types .circle {
+    width: 15px; 
+    height: 15px; 
+    border: 2px solid black; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+    cursor: pointer;
+  }
+  
+  .payment_types img {
+    height: 30px; 
+    margin-left: 25px; 
+   cursor: pointer;
+  }
+  
+  .payment_types .cash {
+    font-size: 16px; 
+    margin: 0;
+  }
+  
+  .payment_types.selected {
+    border-color: #4caf50; 
+  }
+  
+
+  .payment_types .circle.filled {
+    background-color: #4caf50; 
+    border-color: #4caf50; 
+  }
+
+ .prata-regular h3{
+    margin-left: -21rem;
+    font-weight: bold ;
+
+  }
+  .prata-regular h3::before{
+    content: ''; 
+    position: absolute; /* Position it absolutely relative to the paragraph */
+    left: 71.2%; 
+    top: 22.4rem;
+    transform: translateY(-50%); /* Adjust for exact vertical centering */
+    width: 70px; 
+    height: 2px;
+    background-color: rgb(75, 71, 71); 
+}
+
+.bte{
+  width : 25%;
+  background-color: black;
+  padding: 10px ;
+  color: white;
+  margin: 14px;
+  cursor:pointer ;
+  font-family: Arial, Helvetica, sans-serif;
+  float : right;
+}

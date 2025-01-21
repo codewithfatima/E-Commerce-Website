@@ -1,0 +1,233 @@
+.product-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    margin-left: 20px;
+}
+
+.main-image {
+    width: 400px; /* Adjust as needed */
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 2rem;
+}
+
+.product-details {
+    /* flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    display: flex;
+    align-items: flex-starts;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+}
+
+.thumbnail-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.stars {
+    margin-bottom: 1rem;
+}
+
+.stars i {
+    color: #ffcc00;
+    margin-right: 0.2rem;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: black;
+    margin: 1rem 0;
+}
+
+.size-selection {
+    margin-bottom: 1rem;
+}
+
+.size-selection label {
+    margin-right: 0.5rem;
+}
+.bottomcontent{
+    margin-top: 3rem;
+    color: #4f4a4a;
+    font-family: 'Times New Roman', Times, serif;
+}
+.size-selection select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.cots{
+    margin-bottom: 20px;
+}
+/* .add-to-cart {
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.75rem;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+   
+    font-size: 1rem;
+    cursor: pointer;
+} */
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.review {
+    margin-bottom: 80px;
+    max-width: 1050px;
+    margin: 20px auto;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    color: #555;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab-button:hover {
+    color: #000;
+}
+
+.tab-button.active {
+    font-weight: bold;
+    color: #000;
+    border-bottom: 2px solid #007bff;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+.tab p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Price styling */
+.price {
+    margin-top: 1.25rem; /* mt-5 */
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 500; /* font-medium */
+  }
+  
+  /* Description styling */
+  .description {
+    margin-top: 1.25rem; /* mt-5 */
+    font-size: 1.875rem; /* text-3xl */
+    color: #a0aec0; /* font-gray-500 */
+    width: 80%; /* md:w-4/5 */
+  }
+  
+  /* Size selection container */
+  .size-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* gap-4 */
+    margin: 2rem 0; /* my-8 */
+  }
+  
+  /* Size selection label */
+  .size-label {
+    font-size: 1rem; /* Adjust as necessary */
+  }
+  
+  /* Size buttons container */
+  .size-buttons {
+    display: flex;
+    gap: 0.5rem; /* Adjust as necessary */
+  }
+  
+  /* Size button styling */
+  .size-button {
+    border: 1px solid transparent; /* Default border */
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    background-color: #edf2f7; /* bg-gray-100 */
+    cursor: pointer;
+  }
+  
+  .size-button.selected {
+    border-color: #dd6b20; /* border-orange-500 */
+  }
+  
+  /* Add to Cart button styling */
+  .add-to-cart {
+    
+    background-color: #4a5568; /* Adjust as necessary */
+    color: white;
+    padding: 0.5rem 1rem; /* Adjust as necessary */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #2d3748; /* Darker shade on hover */
+  }
+  
+  /* Bottom content styling */
+  .bottom-content {
+    margin-top: 2rem; /* Adjust as necessary */
+    font-size: 0.875rem; /* Adjust as necessary */
+  }
+  
