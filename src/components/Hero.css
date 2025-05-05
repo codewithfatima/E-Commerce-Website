@@ -15,6 +15,7 @@ body {
   border-radius: 2px;    
   margin-left: 7.5rem;
   margin-right: 7.5rem;
+  margin-top: 1rem;
 }
 
 /* Content section styling */
@@ -25,7 +26,6 @@ body {
 
 .text-section p {
   margin: 0;
-  margin-top: -18px;
   font-size: 1rem;
 }
 
@@ -59,9 +59,10 @@ img {
   display: block;
 }
 
-.text {
-  padding-left: 10rem;
-  font-size: 14px; 
+.text-section .text {
+  margin-left: 2rem;
+  font-size: 19px; 
+  font-weight: bolder;
 } 
 
 h1 {
@@ -89,8 +90,9 @@ h1 {
 .text-section .text::before {
   content: '';
   position: absolute; 
-  left: 20rem; 
-  top:15;
+  left: 19rem; 
+  /* top:20; */
+  margin-top: 1rem;
   transform: translateY(-50%); 
   width: 80px; 
   height: 2px;
@@ -110,28 +112,39 @@ h1 {
   .content {
       max-width: 100%;
   }
+  img{
+    width: 100%;
 
-  .text {
-      padding-left: 0;
-      font-size: 1rem;  
   }
 
+  .text-section .text {
+      margin-left: 5rem;
+      font-size: 1rem;  
+      
+  }
   h1 {
       padding-left: 0;
       font-size: 2rem;
+  }
+  .text {
+   padding-top: 2rem;
   }
 
   .flex p {
       padding-left: 0;
       text-align: center;
+      margin-bottom: 2rem;
   }
 
   .flex p::before {
       left: 0;
+      margin-left: 6rem;
   }
 
   .text-section .text::before {
-      left: 0;
+      left: 5rem;
+      margin-top: .8rem;
+  
   }
 }
 
@@ -147,7 +160,7 @@ h1 {
       padding-left: 10rem;
       font-size: 1.1rem;  
   }
-
+  
   h1 {
       padding-left: 5rem;
       font-size: 2.5rem;

@@ -16,12 +16,12 @@
 .sort-container {
   display: flex;              
   justify-content: flex-end;  
-  margin: 1rem;              /* Optional: Adds some margin */
+  margin: 1rem;             
 }
 
 .sort-dropdown {
-  padding: 0.5rem;           /* Add some padding for better appearance */
-  font-size: 16px;           /* Set font size */
+  padding: 0.5rem;           
+  font-size: 16px;           
   border: 1px solid #ccc;    /* Add border */
   border-radius: 4px;        /* Round the corners */
   background-color: white;   /* Background color */
@@ -107,7 +107,14 @@
 /* Medium screens and up (768px and above) */
 @media (min-width: 768px) {
   .map_products{
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr); 
+  }
+  h1{
+    text-align: center;
+    justify-content: center;
+  }
+  .description{
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
 
@@ -128,3 +135,79 @@
   margin-bottom: 0;
 }
 
+/* Grid responsiveness */
+@media (min-width: 768px) {
+  .map_products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .description {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+@media (min-width: 1024px) {
+  .map_products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Gap tweaks */
+.map_products > * {
+  margin-bottom: 24px;
+}
+
+.map_products > :nth-last-child(-n+4) {
+  margin-bottom: 0;
+}
+
+/* Responsive layout adjustments for smaller screens */
+@media (max-width: 768px) {
+  .collection-container {
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  .filter-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .map_products {
+    grid-template-columns: 1fr;
+    margin: 1rem 0;
+  }
+
+  .sort-container {
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .prata-regular {
+    text-align: center;
+    margin: 1rem auto;
+  }
+}
+
+/* Dropdown styling */
+.option {
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Arial';
+}
+
+.option:hover,
+.option:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.25);
+}

@@ -52,26 +52,31 @@ const Collection = () => {
     setFilterProduct(productsCopy.length > 0 ? productsCopy : products);
   }, [category, subCategory, products]);
 
-  // Handle sorting
   useEffect(() => {
     if (filterProduct.length > 0) {
-      let fpCopy = [...filterProduct];
+      let fpCopy = [...filterProduct]; // Make a copy to avoid mutation
       switch (sortType) {
         case 'low-high':
           fpCopy.sort((a, b) => a.price - b.price);
           break;
-
+  
         case 'high-low':
           fpCopy.sort((a, b) => b.price - a.price);
           break;
-
+  
         default:
           break;
       }
-
-      setFilterProduct(fpCopy);
+  
+      // Only update the state if the sorted data is different
+      setFilterProduct(prev => {
+        // Check if the data has actually changed before updating state
+        const isSame = fpCopy.every((product, index) => product === prev[index]);
+        return isSame ? prev : fpCopy;
+      });
     }
-  }, [sortType, filterProduct]);
+  }, [sortType]); // Now only dependent on `sortType` and avoid filtering based on `filterProduct`
+  
 
   return (
     <div className="collection-container">
@@ -111,8 +116,10 @@ const Collection = () => {
       {/* Sorting */}
       <div className='flex-1'>
         <div className="flex  text-base sm:text-2xl mb-4 justify-center ml-18">
-          <Title   text1={'ALL'} text2={'COLLECTION'}  />
-          <select onChange={(e) => setSortType(e.target.value)} className='option' style={{ border: '1px solid gray' }}>
+          {/* <Title   text1={'ALL'} text2={'COLLECTION'}  />
+           */}
+            <h5>ALL COLLECTION</h5>
+          <select onChange={(e) => setSortType(e.target.value)} className='option' style={{ border: '1px solid gray' , marginRight:'9rem'}}>
             <option className='option' value='relevant'>Sort by: Relevant</option>
             <option className='option' value='low-high'>Sort by: Low to High</option>
             <option className='option' value='high-low'>Sort by: High to Low</option>

@@ -11,9 +11,9 @@ const NewsLetter = () => {
   return (
     <>
     <div>
-          <h2 className='hea'>  OUR POLICY</h2>
+          <h2 className='hea'> OUR POLICY</h2>
     <div className='contents'>
-        <div>
+        <div className='policy-des'>
             <img src={assets.exchange_icon}  className='image' alt="" />
             <p className='headings'>Easy Exchange Policy</p>
             <p className='text-gray-400'>We offer Hassle free exchange policy</p>

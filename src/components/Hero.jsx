@@ -4,23 +4,22 @@ import './Hero.css'
 const Hero = () => {
     return (
         <>
-        
+
             <div className='container'>
                 <div className='content'>
                     <div className='text-section'>
                         <p className='text'>OUR BESTSELLERS</p>
                     </div>
-                    <h1 className='prata-regular ' style={{fontWeight:'bolder',fontSize:'3rem'}}>Latest Arrivals</h1>
+                    <h1 className='prata-regular ' style={{ fontWeight: 'bolder', fontSize: '3rem' }}>Latest Arrivals</h1>
                     <div className="flex">
                         <p>SHOP NOW</p>
-                        <p></p>
                     </div>
-                </div>        
+                </div>
 
-            {/* hero right */}
+                {/* hero right */}
 
-                    <img src={HeroImg} alt="Hero Image" />
-    </div>                
+                <img src={HeroImg} alt="Hero Image" />
+            </div>
 
         </>
     );

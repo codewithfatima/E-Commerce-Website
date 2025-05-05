@@ -25,6 +25,9 @@ const Card = () => {
     setCartData(tempData);
   }, [cartItems]);
 
+ 
+  
+
   
   return (
     <div className="cart-container">
@@ -56,10 +59,12 @@ const Card = () => {
                   onChange={(e) => updateQuantity(itemData._id, itemData.size, parseInt(e.target.value))}
                 />
                 <img
-                  onClick={() => updateQuantity(item._id, item.size, 0)}
                   className="remove-icon"
                   src={assets.bin_icon} 
                   alt="Remove item"
+                  // onClick={() => updateQuantity(item._id, item.size, 0)}
+                  onClick={() => updateQuantity(itemData._id, itemData.size, 0)}
+
                 />
               </div>
             );

@@ -1,92 +1,137 @@
-
-.image{
-    width: 15%;
+.image {
+  width: 50px;
+  height: auto;
+  margin-bottom: 0.5rem;
 }
-/* Apply styles for the content container */
+
 .contents {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a responsive grid */
-    gap: 1rem; 
-    justify-content: center; /* Centers items horizontally within the container */
-    align-items: center; /* Centers items vertically within each grid cell */
-    text-align: center; /* Centers text inside the grid items */
-    margin: 2rem auto; /* Centers the container itself and adds margin */
-    max-width: 1000px; /* Ensures the grid doesn't stretch too wide */
-  }
-  
-  /* Styles for each grid item */
-  .contents > div {
-    padding: 1rem; 
-    background-color: #f9f9f8; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow to grid items */
-  }
-  
-  /* Styles for images */
-  .image {
-    width: 50px; /* Adjust as needed */
-    height: auto; /* Keeps aspect ratio */
-    margin-bottom: 0.5rem; /* Adds spacing below the image */
-  }
-  
-  /* Styles for headings */
-  .headings {
-    font-size: 1.25rem; /* Adjust font size as needed */
-    margin: 0.5rem 0; /* Adds vertical spacing around the heading */
-  }
-  
-  /* Styles for text */
-  .text-gray-400 {
-    color: #6b7280; /* Tailwind's gray-400 color */
-    font-size: 1rem; /* Adjust font size as needed */
-  }
-  
-.hea{
-  color:black;
-  font-size:2.6rem;
-  margin-left: 35rem;
-  margin-top:-25px
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 1000px;
 }
-  h3{
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 7rem;
-     margin-left: auto;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-  }
 
-  .Suscribe_content p{
-    color: #26282c; /* Tailwind's gray-400 color */
-    font-size: 1rem;
-    margin: 1rem auto ;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-  }
+.contents > div {
+  padding: 1rem;
+  background-color: #f9f9f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 2rem;
+}
 
-.input{
-    margin: 2rem auto;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-  }
 
-.input_feild{
-  width: 40%;
+.headings {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.text-gray-400 {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.hea {
+  color: black;
+  font-size: 2.6rem;
+  text-align: center;
+  margin: 2rem auto 1rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.Suscribe_content p {
+  color: #26282c;
+  font-size: 1rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.input {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.input_feild {
+  width: 100%;
+  max-width: 400px;
   padding: 10px;
   font-family: Arial, sans-serif;
-}  
+  box-sizing: border-box;
+}
 
-.btn{
-  width: 10%;
+.btn {
+  width: 100%;
+  max-width: 150px;
   padding: 12px;
   background-color: black;
   color: white;
-  outline: black;
-  border: black;
-  text-decoration: none;
+  outline: none;
+  border: none;
   cursor: pointer;
   font-family: Arial, sans-serif;
+  margin-top: 1rem;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hea {
+    font-size: 2rem;
+    margin: 1rem auto;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .Suscribe_content p{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .input_feild, .btn {
+    width: 80%;
+  }
+  .image{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hea {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .headings {
+    font-size: .5rem;
+  }
+
+  .text-gray-400 {
+    font-size: 0.9rem;
+  }
+
+ 
+  .input_feild, .btn {
+    width: 90%;
+  }
+  .Suscribe_content{
+    font-size: .5rem;
+  }
+  
+}
+
+

@@ -1,67 +1,101 @@
 import React, { useState } from 'react';
-import './Login.css'; 
+import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './Login.css';
 
 const Login = () => {
-  const [currentState, setcurrentState] = useState('Sign Up')
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log('Username:', username);
-        console.log('Password:', password);
-    };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+  
+    try {
+      const response = await fetch('http://localhost:8070/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        localStorage.setItem('token', data.jwtTo);
 
-    return (
-      <div className="profile">
-        <div className="login-container">
-            <h4>{currentState}</h4>
+        toast.success('Login Successfully!', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
 
-            <form onSubmit={handleSubmit}>
-             {currentState === 'Login' ? '' : <input
-                   type="text"
-                    id="username"
-                    name="username"
-                    placeholder='Name'
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    required
-                /> }
-              
-                <input
-                    type="email"
-                    id="password"
-                    name="password"
-                    placeholder='Email'
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-               
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder='passowrd'
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <button type="submit">Login</button>
+        setTimeout(() => {
+          navigate('/');
+        }, 1500);
+      } else {
+        setError(data.message);
+        toast.error(data.message, {
+          position: 'top-right',
+        });
+      }
 
-                <div>
-                  <p>Forgot password?</p>
-                  {
-                    currentState === 'Login'
-                    ? <p onClick={()=>setcurrentState('Sign Up')}>Create Account</p>
-                    :<p onClick={()=>setcurrentState('Login')}>Login Here</p>
-                  }
-                </div>
-                 <button>{currentState === 'Login' ? 'Sign In' : 'Sign Up'}</button>
-            </form>
-        </div>
-        </div>
-    );
+    } catch (err) {
+      setError('An error occurred during login.');
+      console.error(err);
+      toast.error('Login failed. Try again later.', {
+        position: 'top-right',
+      });
+    }
+  }
+
+
+  return (
+    <div className="profile">
+      <div className="login-container">
+        <h4>Login</h4>
+
+        <form onSubmit={handleSubmit} >
+          <input
+            type="email"
+            id="password"
+            name="password"
+            placeholder='Email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder='passowrd'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit">Login</button>
+
+          <div className='login-p'>
+            <p >Forgot password?</p>
+
+            <div>
+            {error && <p className="error">{error}</p>}
+            </div>
+            <p>Don't have any account? <Link to='/register'>SignUp</Link></p>
+          </div>
+        </form>
+      </div>
+      <ToastContainer />
+    </div>
+  );
 };
 
 export default Login;

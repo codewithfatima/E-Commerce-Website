@@ -1,4 +1,5 @@
-import React ,{useContext} from 'react'
+import React ,{useContext} from 'react';
+import {Link , useNavigate} from 'react-router-dom';
 import { ShopContext } from '../Context/ShopContext';
 import './carttotal.css'
 
@@ -24,7 +25,10 @@ const CartTotal = () => {
                 <h4>Total</h4>
                 <h6>{currency}{getCartAmount() === 0 ? 0 : getCartAmount() + delivery_fee} </h6>
             </div>
-              <button className='bte ml-18'> Place Order </button>
+            <div>
+            <Link to='/place-order'><button className='btee'> Place Order </button></Link>
+            </div>
+            
         </div>
     </div>
     

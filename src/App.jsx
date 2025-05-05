@@ -18,6 +18,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './index.css'
 import './App.css'
+import Register from './components/Register';
 
 function App() {
 
@@ -34,8 +35,8 @@ function App() {
         <Route path='/product/:productId'  element={<Product />} />
         <Route path='/card'  element={<Card />} />
         <Route path='/login'  element={<Login />} />
+        <Route path='/register'  element={<Register/>} />
         <Route path='/place-order'  element={<PlaceOrder />} />
-        {/* <Route path='/pratice'  element={<Pratice />} /> */}
         <Route path='/orders'  element={<Orders />} />
         </Routes>
         <Footer />
